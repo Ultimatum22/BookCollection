@@ -52,8 +52,8 @@ public class EditBookFragment extends Fragment {
             bookId = getArguments().getLong(ARG_BOOK_ID);
             bookDataBundle = getArguments().getBundle(ARG_BOOK_BUNDLE);
 
-            if(bookDataBundle != null && bookDataBundle.containsKey("bookData")) {
-                bookData = new BookModel(bookId, bookDataBundle.getBundle("bookData"));
+            if(bookDataBundle != null) {
+                bookData = new BookModel(bookId, bookDataBundle);
             } else {
                 //bookData = databaseHandler.getBook(bookId);
             }
